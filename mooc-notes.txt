@@ -1,1 +1,30 @@
 
+Introduction to Programming
+===========================
+
+Commands : Instructions for computer to take action. Computer executes these commands one by one.
+
+#
+print("Single Output.")
+print ("Same as before.")
+
+print("Multiple"); print("Outputs.")
+Same as above
+print("Multiple") 
+print("Outputs.")
+
+Note 1a: The quotation marks ""/'' notify strings. "Strings are a sequence of characters to be printer as it is".
+Note 1b: '' comes in handy print out actual quotation marks "".
+print('"Come right back!", shouted the police officer."')
+
+
+#
+Arithmatic Operators
+--------------------
+print(2+3)
+
+Note: print("2+3") is not same as print(2+3)
+
+#
+
+

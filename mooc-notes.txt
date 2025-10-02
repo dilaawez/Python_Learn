@@ -1,30 +1,193 @@
+            [Day-1]
 
 Introduction to Programming
 ===========================
 
-Commands : Instructions for computer to take action. Computer executes these commands one by one.
+    Commands : Instructions for computer to take action. Computer executes these commands one by one.
 
 #
 print("Single Output.")
 print ("Same as before.")
 
 print("Multiple"); print("Outputs.")
-Same as above
+    Same as above
 print("Multiple") 
 print("Outputs.")
 
-Note 1a: The quotation marks ""/'' notify strings. "Strings are a sequence of characters to be printer as it is".
-Note 1b: '' comes in handy print out actual quotation marks "".
+    Note 1a: The quotation marks ""/'' notify strings. "Strings are a sequence of characters to be printer as it is".
+    Note 1b: '' comes in handy print out actual quotation marks "".
 print('"Come right back!", shouted the police officer."')
 
 
 #
-Arithmatic Operators
---------------------
+    Arithmatic Operators
+    --------------------
 print(2+3)
 
-Note: print("2+3") is not same as print(2+3)
+    Note: print("2+3") is not same as print(2+3)
 
 #
 
+            [Day-2]
 
+    Input : Any information that a user gives to the Programming
+
+name = input("What is your name?")
+print("Hi There, " + name)
+
+# 
+    "name" is a variable that stores some value which can be changed. It has naming convention.
+    Name variables for their purpose (e.g. word is better than a).
+    Must start with a letter; can contain letters, numbers, and _.
+    Case-sensitive: name, Name, and NAME are different.
+    Common practice: use lowercase; separate multiple words with _ (snake_case).
+
+    We can reference a variable in following way
+
+name = input("What is your name? ")
+print("Hi, " + name + "!")
+
+# 
+    Here both "string" and variable have been concatenated with + operator.
+
+first_name = input("What is your first name? ")
+second_name = input("What is your second name? ")
+name = first_name + " " + second_name
+print(name)
+
+#
+    Hard-Coding : Here the three variable values are not obtained from user input, they remain same on every execution of program.
+
+#
+    Integer : numbers with no decimal or fractional practic
+    -15, 0, 1
+number1 = 100       #This is a number
+number2 = "100"     #This is a string
+
+    Different type of operations affect different type of variables in different ways.
+
+print(number1 + number1)    #For integer values '+' means addition.
+print(number2 + number2)    #For string values '+' means concatenation/"stringing together".
+
+#
+    Not all operators are available for all type of variables
+
+print(number2/2)    
+    ERROR : TypeError: unsupported operand type(s) for /: 'str' and 'int'
+
+result = 10 * 5
+print("The result is: " + result)
+    ERROR : TypeError: can only concatenate str (not "int") to str
+
+    casting : This can be used to mix different types of variables
+
+result = 10 * 5
+print("The result is: " + str(result))
+    The result is: 50
+
+#
+    The print command also has built-in functionalities that support combining different types of values
+
+    add comma between the values
+result = 10 * 5
+print("the result is: ",result)    
+
+#
+    Print function gets an automatically added whitespace character between the values separated by a comma.
+
+result = 10 * 10
+print("This is the result:",result)
+This is the result: 50
+
+#
+    fstrings are a more controllable was of formatting printouts in python. fstrings were introduced in python version 3.6.
+
+name = "Mark"
+age = 37
+city = "Palo Alto"
+print("Hi {name}, You are {age} years old. You live in {city}.")
+Hi Mark, You are 37 years old. You live in Palo Alto.
+
+#
+    Floating point numbers : Numbers with a decimal
+
+number1 = 2.5
+number2 = -1.25
+number3 = 3.62
+mean = (number1 + number2 + number3)/3
+print(mean)
+1.6233333333333333
+
+#
+    if the print command is given an additional argument end = "", it will not print a line change.
+
+print("Hi ", end="")
+print("there!")
+Hi there!
+
+#
+    Arithmatic Operators : Mathematical operations
+        Operator	Purpose	        Example	        Result
+        +	        Addition	    2 + 4	        6
+        -	        Subtraction	    10 - 2.5	    7.5
+        *	        Multiplication	-2 * 123	    -246
+        /	        Division (floating point result)9 / 2	4.5
+        //	        Division (integer result)	    9 // 2	4
+        %	        Modulo	        9 % 2	        1
+        **	        Exponentiation	2 ** 3	        8
+
+#
+    The order of mathematical operations is 
+    B   : Solve any calculations inside parentheses, brackets, or other grouping symbols first. 
+    O   : Next, evaluate any exponents, powers, or roots. 
+    D M : Next, perform all multiplication and division operations as they appear from left to right. 
+    A S : Finally, complete all addition and subtraction operations, again working from left to right. 
+    with left-to-right rule 
+
+    Note : Remember, multiplication and division share the same priority, as do addition and subtraction. 
+    You don’t always do one before the other — instead, evaluate them in the order they appear in the expression.
+
+print((5*5) * 3 -5 +6 / 2)
+73.0
+
+#                   
+                            OPERATORS 
+                    ------------|------------
+                    |       |       |       |
+                2   +   3   *   5   -   1.0 /   2
+                |       |       |       |       |
+                ----------------|----------------
+                            OPERANDS
+
+    The data type of an operand determines the data type of the result.
+
+height = 172.5
+weight = 68.55
+bmi = weight/(height/100) ** 2
+23.037177063642087
+
+#
+    Input command can be used to read number (integers) but the string produced must be converted to numeric data type.
+
+    input_str = input("Which year were you born? ")
+    print(f"Your age at the end of the year 2021: {2021 - input_str}")
+        ERROR : TypeError: unsupported operand type(s) for -: 'int' and 'str'
+
+    year = int(input("Which year were you born? "))
+    print(f"Your age at the end of the year 2021: {2021 - year}")
+
+# 
+    A very common operation to increase the value of a variable
+
+sum = 0
+number = int(input("First number: "))
+sum = sum + number
+print(sum)
+
+    Can be written as
+
+sum = 0
+sum += int(input("First number: "))
+print(sum)
+
+    

@@ -59,7 +59,7 @@ print(name)
     Hard-Coding : Here the three variable values are not obtained from user input, they remain same on every execution of program.
 
 #
-    Integer : numbers with no decimal or fractional practic
+    Integer : numbers with no decimal or fractional part.
     -15, 0, 1
 number1 = 100       #This is a number
 number2 = "100"     #This is a string
@@ -177,7 +177,7 @@ bmi = weight/(height/100) ** 2
     print(f"Your age at the end of the year 2021: {2021 - year}")
 
 # 
-    A very common operation to increase the value of a variable
+    Compound assignment operator : A very common operation to increase the value of a variable.
 
 sum = 0
 number = int(input("First number: "))
@@ -191,3 +191,417 @@ sum += int(input("First number: "))
 print(sum)
 
     
+            [Day 3]
+
+#
+    Conditional Statements : Programs that execute only in certain conditions. The values given as input affects which parts of the program
+    are executed. The program contains conditional statement with a block of code which is executed only if the condition in the statement is
+    true.
+
+age = int(input("How old you are? "))
+if age > 17:
+     print("You are of age!")
+     print("Here's a copy of GTA6 for you.")
+     print("Next cusotmer, please!")
+
+
+#
+
+    Comparison Operators : Consitional statement contain two values to compare, this is done with comparison operators.
+
+Operator	    Purpose	                    Example
+==	            Equal to	                a == b
+!=	            Not equal to	            a != b
+>	            Greater than	            a > b
+>=	            Greater than or equal to	a >= b
+<	            Less than	                a < b
+<=	            Less than or equal to	    a <= b
+
+
+#
+
+    Indentation : Python recognises that a block of code is part of a conditional statement if each line of code in the block
+    is indented the same.
+
+
+#
+
+    Boolean values : A condition in a conditional statement resulting in truth value-Either true or False.
+                     bool data type.
+                     
+    Boolean expressions : Any bit of code that results in a boolean value.
+                          "condition" and "boolean expression" can be used interchangeably.
+
+a = 3
+condition = a < 5
+print(condition)
+if condition:
+    print("a is less than 5")
+
+condition=true
+if condition:
+    print("This is printed every time.")
+
+
+                [Day 4]
+
+
+#
+
+    Programming Terminology
+
+
+#
+
+    STATEMENT : Part of the program which executes something. (One instruction.)
+
+print("Hi!")        //print statement
+    or
+number = 2          //assignment statement
+    or 
+if name == "Anna":  //conditional statement
+    print("Hi!")
+    number = 2
+
+#
+
+    BLOCK : Group of consecutive statements at the same level in the structure of the program. (Group of indented statements.)
+
+    Note : In python blocks are indented with same amount of whitespace.
+
+if age > 17:
+    // beginning of the conditional block
+    print("You are of age!")
+    age = age + 1
+    print("You are now one year older...")
+    // end of conditional block
+print("This here belongs to another block")
+
+#
+
+    Note : The mail block of python code ust always be at the leftmost edge of the file, without Indentation.
+
+// this program will not work because it is not written at the leftmost edge of the file.
+    print("hello world!")
+    print("this program is not very good...")
+
+#
+
+    EXPRESSION : Bit of code, when evaluated in program, produces a value of a specific data type. Which can be used in a program.
+
+    Expression	        Value	    Type	                Python data type
+    2 + 4 + 3	        9	        integer	                int
+    "abc" + "de"	    "abcde"	    string	                str
+    11 / 2	            5.5	        floating point number	float
+    2 * 5 > 9	        True	    Boolean value	        bool
+
+    Note : Because all expressions have a type, they can be assigned to variables.
+
+// the variable x is assigned to a value of the expression 1 + 2
+x = 1 + 2
+
+#
+
+    FUNCTION : A function is a piece of reusable code that takes input (parameter or argument), when called performs some operations (expression evaluation),
+             and return a result (output) that can be stored in a variable.
+
+print("this is an argument")                // print function
+name = input("Please type in your name: ")  // input function; name variable
+
+#
+
+    DATA TYPE : The characteristics of any value present in a program or stored by a variable.
+
+    Example	            Data Type	    Description
+    42	                int	            Integer — whole number
+    3.14	            float	        Floating-point — decimal number
+    "Hello"	            str	            String — sequence of characters
+    True	            bool	        Boolean — logical value (True/False)
+    [1, 2, 3]	        list	        Ordered collection of values
+    (4, 5)	            tuple	        Immutable ordered collection
+    {'a': 1, 'b': 2}	dict	        Key–value pairs
+    {1, 2, 3}	        set	            Unordered unique elements
+
+    Note : Use 'type' function to find out the data type.
+
+print(type("Anna"))
+<class 'str'>
+
+print(type("100"))
+<class 'str'>
+
+print(type(100))
+<class 'int'>
+
+#
+
+    SYNTAX : The grammar of programming, the set of rules that define the correct structure and order of spaces/tabs, symbols, 
+            words, and punctuation in a programming language.
+
+    Common Syntax Elements
+    Element	                Example	        Meaning
+    Keywords	            if, for, def	Reserved words
+    Operators	            +, -, *, /	    Perform operations
+    Parentheses & Colons	(), :	        Define structure (functions, loops)
+    Indentation	            4 spaces	    Defines code blocks in Python
+
+    For eg : The first line of a python 'if statement' should end in colon ':' character and the block of the statement should be indented.
+
+if name == "Anna":
+    print("Hi!")
+
+#
+
+    DEBUGGING : The process of finding, analyzing, and fixing bugs (error, flaw, or unexpected behavior) in a program so that it runs correctly.
+
+    Common Debugging Tools & Methods (Python)
+    Tool / Method	            Description
+    Print Statements	        Add print() at key points to check variable values.
+    pdb (Python Debugger)	    Built-in debugger to step through code interactively.
+    IDE Debugger	            Visual Studio Code, PyCharm have GUI debuggers with breakpoints.
+    Logging	                    Use import logging for systematic error tracking.
+    Exception Handling	        Use try...except blocks to catch and analyze errors.
+
+
+    Types of Errors Found During Debugging
+    Type	            Example	            Description
+    Syntax Error	    print "Hi"	        Code doesn’t follow language rules
+    Runtime Error	    10 / 0	            Error occurs while running
+    Logic Error	        Wrong calculation	Code runs but gives wrong output
+
+#
+
+    Basic Two-Branch Decision (if / else) (IF-ELSE CONDITIONAL STATEMENT FLOW)
+
+                                    [Start]                                             
+                                       |
+                                [Condition?]
+                                    /      \
+                                True        False
+                                /              \
+                            [Action A]       [Action B]
+
+if condition1:
+    ...
+else:
+    ...
+
+    Note : there can never be an else branch without an if branch before it. The if-else construction as a whole forms a single conditional statement.
+        one and exactly one of the branches will always be executed.
+#
+
+    Multi-Branch Flow (if / elif / else) (IF-ELIF-ELSE CONDITIONAL STATEMENT FLOW)
+
+                              [if Condition A?]
+                                /          \
+                            True           False
+                            /                 \
+                    [Action A]          [elif Condition B?]
+                                            /          \
+                                        True          False
+                                        /                 \
+                                [Action B]          [elif Condition C?]
+                                                        /          \
+                                                    True          False
+                                                    /                 \
+                                                [Action C]             [else]
+                                                                          |
+                                                                        [Action D]
+
+
+if condition1:
+    // runs if condition1 is True
+elif condition2:
+    // runs if condition1 was False and condition2 is True
+elif condition3:
+    // runs if all previous are False, but condition3 is True
+else:
+    // runs only if all previous conditions are False
+
+
+    Note : there is no limit to the number of elif branches a conditional statement can contain, and the else branch is not mandatory.
+        an elif statement is executed only if none of the preceding branches is executed.
+
+#
+
+    COMBINING CONDITIONS
+
+#
+
+    LOGICAL OPERATORS (BOOLEAN OPERATORS in programming)
+
+        The operator "and" specifies that all the given conditions must be true at the same time. 
+        The operator "or" specifies that at least one of the given conditions must be true.
+        The operator not negates a condition.
+
+    a	    b	    a and b	    a or b      not a       not B    
+    False	False	False	    False       True        True
+    True	False	False	    True        False       True
+    False	True	False	    True        True        False
+    True	True	True	    True        False       False
+
+#
+
+number = int(input("Please type in a number: "))
+if number >= 5 and <= 8:                            // number must simultaneously be at least 5 and at most 8. That is, it must be between 5 and 8.
+    print("The number is between 5 and 8")
+
+#
+
+number = int(input("Please type in a number: "))
+if number < 5 and > 8:                              // number must be either less than 5 or greater than 8. That is, it must not be within the range of 5 to 8.
+    print("The number is not within the range of 5 to 8")
+
+#
+
+number = int(input("Please type in a number: "))
+if not (number >= 5 and number <= 8):               // number range from 5 to 8 excluded
+    print("The number is not within the range of 5 to 8")
+
+#
+
+    Note :  x >= a and x <= b
+            a <= x <= b         // same as before, another notation used in python
+
+#
+    COMBINING AND CHAINING CONDITIONS
+
+n1 = int(input("Number 1: "))
+n2 = int(input("Number 2: "))
+n3 = int(input("Number 3: "))
+n4 = int(input("Number 4: "))
+
+if n1 > n2 and n1 > n3 and n1 > n4:
+    greatest = n1
+elif n2 > n3 and n2 > n4:
+    greatest = n2
+elif n3 > n4:
+    greatest = n3
+else:
+    greatest = n4
+
+print(f" {greatest} is the greatest of the numbers.")
+
+#
+
+    NESTED CONDITIONALS
+        With nested conditionals, correct indentation is crucial, it defines which branches belong together.
+
+#
+
+number = int(input("Please type in a number: "))
+
+if number > 0:
+    if number % 2 == 0:
+        print("The number is even")
+    else:
+        print("The number is odd")
+else:
+    print("The number is negative or zero")
+
+#
+
+    SIMPLE LOOPS : A loop is a control structure that lets you repeat a block of code multiple times until a condition is met or a sequence is finished.
+                The process of executing one repetition of a loop is also referred to as an iteration of the loop.
+
+    Loop Type	    Used For	                        Example
+    for	            Repeat over items in a sequence	    for x in range(5)
+    while	        Repeat while condition true	        while x < 5:
+    break	        Stop loop early	                    if x == 3: break
+    continue	    Skip current iteration	            if x == 2: continue
+    else	        Runs after loop ends normally	    for ... else:
+
+#
+
+    Note : Loops and conditionals form the central control structure in programming since they allow which line of code executed when.
+         While conditional structures allow you to choose "between" sections of code, iteration structures allow you to "repeat" sections of code.
+         With loops, it is crucial that there is always a way to exit the loop at some point in the code, otherwise the repetition could go on forever.
+
+#
+
+while True:
+    number = int(input("Please type in a number, -1 to quit: "))
+
+    if number == -1:
+        break
+
+    print(number ** 2)
+
+print("Thanks and bye!")
+
+#
+
+while True:
+    code = input("Please type in your PIN: ")
+    if code == "1234":
+        break
+    print("Incorrect...try again")
+
+print("Correct PIN entered!")
+
+#
+
+    LOOPS AND HELPER VARIABLES
+
+#
+
+    The program uses two helper variables. The variable "attempts" keeps track of how many times the user has typed in a PIN. 
+    The variable "success" is set to either True or False based on whether the user is successful in signing in.
+
+attempts = 0
+
+while True:
+    code = input("Please type in your PIN: ")
+    attempts += 1
+
+    if code == "1234":
+        success = True
+        break
+
+    if attempts == 3:
+        success = False
+        break
+
+    # this is printed if the code was incorrect AND there have been less than three attempts
+    print("Incorrect...try again")
+
+if success:
+    print("Correct PIN entered!")
+else:
+    print("Too many attempts...")
+
+#
+
+    Debugging
+        The order of conditional statements, or of different branches within a conditional statement, is a common cause for bugs, 
+        especially in loops. Debugging print statements are often the simplest way of finding their cause.
+
+#
+
+    CONCATENATING STRINGS WITH THE + OPERATOR 
+
+#
+
+        // In the following code the helper variable "attempts" keep track of  how many time the PIN is entered.
+        The variable is set to zero outside the loop, and each iteration increases its value by one.
+
+attempts = 0
+
+while True:
+    code = input("Please type in your PIN: ")
+    attempts += 1
+    # ...
+
+
+        // A similar idea of incrementation works with string variables as well. The program could, 
+        for instance, keep track of all the typed in PIN codes.
+        The helper variable is initialized to an empty string, that is, a string with no characters in it. With each iteration the string gets longer.
+        
+codes = ""
+attempts = 0
+
+while True:
+    code = input("Please type in your PIN: ")
+    attempts += 1
+    codes += code + ", "
+    # ...

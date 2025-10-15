@@ -605,3 +605,36 @@ while True:
     attempts += 1
     codes += code + ", "
     # ...
+
+                [Day 5]
+
+#
+
+    INITIALIZATION, CONDITION AND UPDATE
+    To create a loop you'll often need to include three distinct steps: initialisation, condition, and updating the iteration variables.
+    If any one of these three components is missing, the loop will likely not function correctly.
+
+// Ask the user for a number
+number = int(input("PLease type in a number: ))         INITIALIZATION
+
+// Repeat while the number is less than 10
+while number < 10:                                      CONDITION
+    
+    // Print out and increment
+    print(number)
+    number += 1                                         UPDATING VARIABLES
+
+print("Execution finished.")
+
+#
+
+    WRITING CONDITIONS
+    Whenever you write a loop you should make sure that the execution of the loop will always end at some point. 
+
+#
+
+number = int(input("Please type in a number: "))
+
+while number < 100 and number % 5 != 0:
+    print(number)
+    number += 3
